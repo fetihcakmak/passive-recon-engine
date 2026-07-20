@@ -50,7 +50,15 @@ main.py
 
 ---
 
-## ⚡ Kullanım
+## ⚡ Kurulum
+
+```bash
+git clone https://github.com/fetihcakmak/passive-recon-engine.git
+cd passive-recon-engine
+python main.py --demo   # Ek bağımlılık gerekmez (yalnızca stdlib)
+```
+
+## 🚀 Kullanım
 
 ```bash
 # Demo modu
@@ -68,6 +76,32 @@ python main.py --domain example.com --subs
 # Sadece sertifika şeffaflığı
 python main.py --domain example.com --certs
 ```
+
+## 🖥️ Örnek Çıktı
+
+```
+============================================================
+  DNS KAYITLARI
+============================================================
+  [    A] 93.184.216.34 (TTL: 3600)
+  [   NS] a.iana-servers.net (TTL: 86400)
+  [   MX] 10 mail.example.com (TTL: 3600)
+  [  TXT] v=spf1 -all (TTL: 3600)
+
+============================================================
+  ALT ALAN ADI KEŞFİ
+============================================================
+  [+] www.example.com → 93.184.216.34
+  [+] api.example.com → 93.184.216.36
+```
+
+## ⚠️ Etik Kullanım
+
+Bu araç WHOIS, DNS ve crt.sh gibi tamamen **pasif/açık kaynak** (OSINT) veri kaynaklarını kullanır — hedefe doğrudan paket göndermez. Yine de subdomain keşfi sırasında yapılan DNS sorguları hedef altyapıya ulaşır; aracı yalnızca sahibi olduğunuz alan adları veya izinli bug bounty/pentest kapsamındaki hedefler için kullanın.
+
+## 📄 Lisans
+
+Bu depo şu an bir lisans dosyası içermiyor. Kullanım koşulları için proje sahibiyle iletişime geçin.
 
 ---
 
